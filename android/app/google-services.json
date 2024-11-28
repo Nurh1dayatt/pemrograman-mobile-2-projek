@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "895365009008",
+    "project_id": "latihan-if22b-b3a15",
+    "storage_bucket": "latihan-if22b-b3a15.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895365009008:android:153d09a503ff65edb72eb5",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY-aBM3TYFLBLDMz-GamRG3j29clR4li8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895365009008:android:0d883c208e161675b72eb5",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY-aBM3TYFLBLDMz-GamRG3j29clR4li8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895365009008:android:ae8b943379e8f469b72eb5",
+        "android_client_info": {
+          "package_name": "com.nurhidayat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY-aBM3TYFLBLDMz-GamRG3j29clR4li8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
