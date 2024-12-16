@@ -83,9 +83,9 @@ class LoginView extends GetView<LoginController> {
             ),
             ElevatedButton(
               onPressed: () {
-                cAuth.login(controller.cEmail.text, controller.cPass.text);
+                cAuth.LoginGoogle();
               },
-              child: Text("Login"),
+              child: Text("Login With Google"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color.fromARGB(255, 105, 150, 34),
                 foregroundColor: Colors.white,
