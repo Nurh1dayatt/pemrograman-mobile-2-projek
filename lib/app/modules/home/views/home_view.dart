@@ -6,6 +6,8 @@ import 'package:myapp/app/modules/dosen/views/dosen_add_view.dart';
 import 'package:myapp/app/modules/dosen/views/dosen_view.dart';
 import 'package:myapp/app/modules/mahasiswa/views/mahasiswa_add_view.dart';
 import 'package:myapp/app/modules/mahasiswa/views/mahasiswa_view.dart';
+import 'package:myapp/app/modules/pegawai/views/pegawai_add_view.dart';
+import 'package:myapp/app/modules/pegawai/views/pegawai_view.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -32,25 +34,17 @@ class _DashboardAdminState extends State<DashboardAdmin> {
       'title': 'Dashboard',
       'view': MahasiswaView(),
       'add': () => MahasiswaAddView(),
-      'add': () => DosenAddView()
     },
     {
       'title': 'Data Mahasiswa',
       'view': MahasiswaView(),
       'add': () => MahasiswaAddView(),
-      'add': () => DosenAddView()
     },
-    {
-      'title': 'Data Dosen',
-      'view': DosenView(),
-      'add': () => MahasiswaAddView(),
-      'add': () => DosenAddView()
-    },
+    {'title': 'Data Dosen', 'view': DosenView(), 'add': () => DosenAddView()},
     {
       'title': 'Data Pegawai',
-      'view': MahasiswaView(),
-      'add': () => MahasiswaAddView(),
-      'add': () => DosenAddView()
+      'view': PegawaiView(),
+      'add': () => PegawaiAddView()
     },
   ];
 
@@ -68,7 +62,6 @@ class _DashboardAdminState extends State<DashboardAdmin> {
             icon: Icon(Icons.add_circle_outline),
           )
         ],
-        
       ),
       body: _fragment[_index]['view'],
     );

@@ -55,7 +55,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.PEGAWAI,
-      page: () => const PegawaiView(),
+      page: () => PegawaiView(),
       binding: PegawaiBinding(),
     ),
   ];

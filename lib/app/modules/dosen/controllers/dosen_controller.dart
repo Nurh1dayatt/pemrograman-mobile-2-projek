@@ -1,9 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:myapp/app/modules/dosen/bindings/dosen_binding.dart';
 
 class DosenController extends GetxController {
-  //TODO: Implement DosenController
+  //TODO: Implement MahasiswaController
   late TextEditingController cNidn;
   late TextEditingController cNama;
   late TextEditingController cProdi;
@@ -13,21 +15,21 @@ class DosenController extends GetxController {
 
   Future<QuerySnapshot<Object?>> GetData() async {
     CollectionReference dosen = firestore.collection('dosen');
+
     return dosen.get();
   }
 
-  Stream<QuerySnapshot<Object?>> StreamData() {
+  Stream<QuerySnapshot<Object?>> streamData() {
     CollectionReference dosen = firestore.collection('dosen');
     return dosen.snapshots();
   }
 
-// Bagian Tambah Data
   void add(String nidn, String nama, String prodi, String fakultas) async {
     CollectionReference dosen = firestore.collection("dosen");
 
     try {
       await dosen.add({
-        "npm": nidn,
+        "nidn": nidn,
         "nama": nama,
         "prodi": prodi,
         "fakultas": fakultas,
@@ -42,6 +44,8 @@ class DosenController extends GetxController {
             cFakultas.clear();
             Get.back();
             Get.back();
+            Get.back();
+            Get.back();
             textConfirm:
             "OK";
           });
@@ -54,7 +58,6 @@ class DosenController extends GetxController {
     }
   }
 
-// Bagian Update Data
   Future<DocumentSnapshot<Object?>> GetDataById(String id) async {
     DocumentReference docRef = firestore.collection("dosen").doc(id);
 
@@ -75,12 +78,14 @@ class DosenController extends GetxController {
 
       Get.defaultDialog(
         title: "Berhasil",
-        middleText: "Berhasil mengubah data dosen.",
+        middleText: "Berhasil mengubah data Dosen.",
         onConfirm: () {
           cNidn.clear();
           cNama.clear();
           cProdi.clear();
           cFakultas.clear();
+          Get.back();
+          Get.back();
           Get.back();
           Get.back();
         },
@@ -95,7 +100,6 @@ class DosenController extends GetxController {
     }
   }
 
-// Bagian Delete data
   void delete(String id) {
     DocumentReference docRef = firestore.collection("dosen").doc(id);
 
