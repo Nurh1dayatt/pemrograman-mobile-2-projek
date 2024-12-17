@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:myapp/app/modules/pegawai/views/pegawai_view.dart';
 
 import '../modules/dosen/bindings/dosen_binding.dart';
 import '../modules/dosen/views/dosen_view.dart';
@@ -9,7 +10,7 @@ import '../modules/login/views/login_view.dart';
 import '../modules/mahasiswa/bindings/mahasiswa_binding.dart';
 import '../modules/mahasiswa/views/mahasiswa_view.dart';
 import '../modules/pegawai/bindings/pegawai_binding.dart';
-import '../modules/pegawai/views/pegawai_view.dart';
+
 import '../modules/reset_password/bindings/reset_password_binding.dart';
 import '../modules/reset_password/views/reset_password_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
@@ -55,7 +56,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.PEGAWAI,
-      page: () => PegawaiView(),
+      page: () => KaryawanView(),
       binding: PegawaiBinding(),
     ),
   ];

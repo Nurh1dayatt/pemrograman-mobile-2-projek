@@ -6,7 +6,7 @@ import 'package:myapp/app/modules/pegawai/views/pegawai_update_view.dart';
 
 import '../controllers/pegawai_controller.dart';
 
-class PegawaiView extends GetView<PegawaiController> {
+class KaryawanView extends GetView<PegawaiController> {
   void showOption(id) async {
     var result = await Get.dialog(
       SimpleDialog(
@@ -15,7 +15,7 @@ class PegawaiView extends GetView<PegawaiController> {
             onTap: () {
               Get.back();
               Get.to(
-                PegawaiUpdateView(),
+                KaryawanUpdateView(),
                 arguments: id,
               );
             },
@@ -55,9 +55,9 @@ class PegawaiView extends GetView<PegawaiController> {
                       backgroundColor: Color.fromARGB(255, 248, 248, 248),
                     ),
                     title: Text(
-                        "${(listAllDocs[index].data() as Map<String, dynamic>)["nama"]}"),
+                        "${(listAllDocs[index].data() as Map<String, dynamic>)["nama_karyawan"]}"),
                     subtitle: Text(
-                        "${(listAllDocs[index].data() as Map<String, dynamic>)["jabatan"]}"),
+                        "${(listAllDocs[index].data() as Map<String, dynamic>)["no_karyawan"]}"),
                     trailing: IconButton(
                         onPressed: () => showOption(listAllDocs[index].id),
                         icon: Icon(Icons.more_vert)),
